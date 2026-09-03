@@ -1,0 +1,16 @@
+{
+  "name": "polish-address-search",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "infra:deploy": "bash infra/deploy-app-service.sh",
+    "infra:validate": "az bicep build --file infra/main.bicep --stdout > /dev/null",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
