@@ -14,9 +14,26 @@
   <body>
     <main>
       <header class="hero">
-        <div class="brand" aria-label="GdzieTo?">
-          <span class="brand-mark" aria-hidden="true">⌖</span>
-          <span>GdzieTo?</span>
+        <div class="topbar">
+          <div class="brand" aria-label="GdzieTo?">
+            <span class="brand-mark" aria-hidden="true">⌖</span>
+            <span>GdzieTo?</span>
+          </div>
+          <div class="settings">
+            <button id="settings-button" class="settings-button" type="button" aria-expanded="false" aria-controls="settings-panel">
+              Opcje
+            </button>
+            <div id="settings-panel" class="settings-panel" hidden>
+              <label class="toggle">
+                <input id="autocomplete-toggle" type="checkbox" />
+                <span>Autocomplete</span>
+              </label>
+              <label class="toggle">
+                <input id="render-toggle" type="checkbox" />
+                <span>Rendering mapy</span>
+              </label>
+            </div>
+          </div>
         </div>
         <div class="hero-copy">
           <p class="eyebrow">Wyszukiwarka adresów w Polsce</p>
@@ -45,6 +62,7 @@
               <span aria-hidden="true">→</span>
             </button>
           </div>
+          <ol id="suggestions" class="suggestions" aria-label="Podpowiedzi adresów" hidden></ol>
           <p class="hint">Spróbuj: <button type="button" class="example">Rynek Główny 1, Kraków</button></p>
         </form>
       </header>
